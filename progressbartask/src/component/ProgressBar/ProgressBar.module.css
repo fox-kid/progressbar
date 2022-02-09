@@ -1,0 +1,98 @@
+.progress_bar_wrapper {
+  width: 100%;
+  background-color: var(--breadcrumbs-background);
+  height: 100px;
+}
+
+.steps {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.step_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step_item .step__line {
+  width: 0;
+}
+
+.step_item__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary-dark-color);
+  color: #000;
+  position: relative;
+  flex-shrink: 0;
+  margin: 5px;
+  margin-bottom: 10px;
+  transition: background-color 1s ease-in-out;
+}
+
+.step_item__number {
+  color: var(--secondary-success-color);
+  display: flex;
+}
+
+.step_item__number svg {
+  width: 15px;
+}
+
+.step_item__title {
+  position: absolute;
+  top: 100%;
+  margin-top: 5px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.step__line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--secondary-dark-color);
+}
+
+.step__line div {
+  position: absolute;
+  left: 0;
+  width: 0;
+  border-radius: 4px;
+  background-color: var(--primary-base-color);
+  height: 100%;
+  transition: width 1s ease-in-out;
+}
+
+.step__line_first {
+  background-color: var(--primary-base-color);
+}
+
+.step__item_list {
+  display: flex;
+  align-items: center;
+}
+
+.step_item + .step_item .step__line {
+  display: flex;
+  width: 150px;
+}
+
+.step_item.isActive .step_item__circle {
+  background-color: var(--primary-base-color);
+}
+
+.step_item.isActive .step__line div,
+.step__line_last.isActive div {
+  width: 100%;
+}
