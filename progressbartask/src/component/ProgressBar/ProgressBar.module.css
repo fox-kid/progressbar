@@ -1,7 +1,10 @@
 .progress_bar_wrapper {
   width: 100%;
   background-color: var(--breadcrumbs-background);
-  height: 100px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  margin-top: -60px;
 }
 
 .steps {
@@ -17,6 +20,10 @@
   position: relative;
 }
 
+.step_item:first-of-type .step__line {
+  display: none;
+}
+
 .step_item .step__line {
   width: 0;
 }
@@ -26,9 +33,9 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background-color: var(--secondary-dark-color);
+  width: 34px;
+  height: 34px;
+  background-color: var(--placeholder-gradient-color);
   color: #000;
   position: relative;
   flex-shrink: 0;
@@ -38,8 +45,9 @@
 }
 
 .step_item__number {
-  color: var(--secondary-success-color);
+  color: var(--secondary-dark-color);
   display: flex;
+  font-weight: 700;
 }
 
 .step_item__number svg {
@@ -52,6 +60,7 @@
   margin-top: 5px;
   font-weight: 700;
   text-transform: capitalize;
+  color: var(--secondary-dark-color);
 }
 
 .step__line {
@@ -61,7 +70,7 @@
   position: relative;
   height: 4px;
   border-radius: 4px;
-  background-color: var(--secondary-dark-color);
+  background-color: var(--placeholder-gradient-color);
 }
 
 .step__line div {
@@ -95,4 +104,12 @@
 .step_item.isActive .step__line div,
 .step__line_last.isActive div {
   width: 100%;
+}
+
+.step_item.isActive .step_item__title {
+  color: #000;
+}
+
+.step_item.isActive .step_item__number {
+  color: #fff;
 }

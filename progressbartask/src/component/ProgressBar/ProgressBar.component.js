@@ -35,7 +35,6 @@ class ProgressBar extends PureComponent {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className={styles.progress_bar_wrapper}>
         <div className={styles.steps}>
@@ -54,7 +53,7 @@ class ProgressBar extends PureComponent {
                       : styles.step_item
                   }
                 >
-                  <div className={styles.step__line}>
+                  <div className={styles.step__line} style={{width: `calc(100vw / ${this.state.steps.length-1} / 2)`}}>
                     <div></div>
                   </div>
                   <div className={styles.step_item__circle}>
