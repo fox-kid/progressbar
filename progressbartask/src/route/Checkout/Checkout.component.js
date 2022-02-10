@@ -9,7 +9,7 @@
  * @link https://github.com/scandipwa/base-theme
  */
 
-import ContentWrapper from "Component/ContentWrapper";
+import ContentWrapper from "SourceComponent/ContentWrapper/ContentWrapper.component";
 
 import { Checkout as SourceCheckout } from "SourceRoute/Checkout/Checkout.component";
 import ProgressBar from "../../component/ProgressBar/ProgressBar.component";
